@@ -5,7 +5,9 @@ import HomePage from "./HomePage";
 import Business from "./Business";
 import Health from "./Health";
 import Science from "./Science";
-import Weather from "./Weather";
+import Entertainment from "./Entertainment";
+import Sports from "./Sports";
+import Technology from "./Technology";
 
 class Main extends Component {
   render() {
@@ -19,7 +21,9 @@ class Main extends Component {
             <Route exact path="/business" component={Business} />
             <Route exact path="/health" component={Health} />
             <Route exact path="/science" component={Science} />
-            <Route exact path="/weather" component={Weather} />
+            <Route exact path="/entertainment" component={Entertainment} />
+            <Route exact path="/sports" component={Sports} />
+            <Route exact path="/technology" component={Technology} />
             <Redirect to="/home" />
           </Switch>
         </BrowserRouter>

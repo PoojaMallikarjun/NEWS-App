@@ -23,7 +23,6 @@ class HeadLines extends Component {
       <div>
         <h1>Business</h1>
         <Link to="/home">Home</Link>
-
         {this.state.data.map((item, index) => (
           <div key={index}>
             <li>

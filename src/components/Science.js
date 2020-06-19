@@ -23,7 +23,6 @@ class Science extends Component {
       <div>
         <h1>Science</h1>
         <Link to="/home">Home</Link>
-
         {this.state.data.map((item, index) => (
           <div key={index}>
             <li>
