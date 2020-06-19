@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-class HeadLines extends Component {
+class Health extends Component {
   state = {
     data: [],
   };
 
   async componentDidMount() {
     let country = "in";
-    let url = `http://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.REACT_APP_API_KEY}`;
+    let url = `http://newsapi.org/v2/top-headlines?country=${country}&category=health&apiKey=${process.env.REACT_APP_API_KEY}`;
     let res = await axios.get(url);
     let data = await res.data.articles;
 
@@ -21,8 +21,9 @@ class HeadLines extends Component {
   render() {
     return (
       <div>
-        <h1>Todays Headlines</h1>
+        <h1>Health</h1>
         <Link to="/home">Home</Link>
+
         {this.state.data.map((item, index) => (
           <div key={index}>
             <li>
@@ -35,4 +36,4 @@ class HeadLines extends Component {
     );
   }
 }
-export default HeadLines;
+export default Health;
