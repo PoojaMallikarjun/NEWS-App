@@ -1,30 +1,17 @@
 import React, { Component } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
-import Headlines from "./TopHeadLines";
-import HomePage from "./HomePage";
-import Business from "./Business";
-import Health from "./Health";
-import Science from "./Science";
-import Entertainment from "./Entertainment";
-import Sports from "./Sports";
-import Technology from "./Technology";
+import News from "./News";
+import Home from "./Home";
 
 class Main extends Component {
   render() {
     return (
       <React.Fragment>
         <BrowserRouter>
-          <HomePage />
           <Switch>
-            <Route path="/home" />
-            <Route exact path="/topheadlines" component={Headlines} />
-            <Route exact path="/business" component={Business} />
-            <Route exact path="/health" component={Health} />
-            <Route exact path="/science" component={Science} />
-            <Route exact path="/entertainment" component={Entertainment} />
-            <Route exact path="/sports" component={Sports} />
-            <Route exact path="/technology" component={Technology} />
-            <Redirect to="/home" />
+            <Route exact path="/" component={Home}/>
+            <Route path="/:type" component={News} /> 
+            <Redirect path="/" />
           </Switch>
         </BrowserRouter>
       </React.Fragment>
