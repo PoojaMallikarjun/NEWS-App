@@ -10,8 +10,8 @@ class Main extends Component {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Home}/>
-            <Route path="/:type" component={News} /> 
-            <Redirect path="/" />
+            <Route exact path="/:type" component={News} /> 
+            <Redirect path="/"/>
           </Switch>
         </BrowserRouter>
       </React.Fragment>
