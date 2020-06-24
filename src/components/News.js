@@ -6,9 +6,14 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
-  Button
+  CardHeader,
+  CardSubtitle,Col,
+  Button,Row, CardGroup
 } from "reactstrap";
+
+// function refreshPage(){
+//   window.location.reload()
+// }
 
 class News extends React.Component {
   state = {
@@ -31,36 +36,45 @@ class News extends React.Component {
       }
     });
   }
+  
+  
 
   newsCard = ({ item }) => (
-    <Card>
-      <CardTitle> {item.title} </CardTitle>
-      <CardImg width="100%" src={item.urlToImage}></CardImg>
-      <CardBody>
-        <CardSubtitle>{item.author}</CardSubtitle>
-        <CardText>{item.content}</CardText>
-        <Button variant="Dark"><a href={item.url}>READ MORE</a></Button> 
-      </CardBody>
-    </Card>
+      <div className="container mt-2">
+        <CardGroup>
+          <Card body outline color="secondary">
+            {/* <CardTitle><strong>{item.title}</strong></CardTitle> */}
+            <CardHeader><strong>{item.title}</strong></CardHeader>
+            <CardImg top width="100%" src={item.urlToImage}></CardImg>
+            <CardBody>
+              <CardSubtitle><strong>{item.author}</strong></CardSubtitle>
+              <CardText>{item.content}</CardText>
+              <Button color="dark"><a href={item.url}>READ MORE</a></Button> 
+            </CardBody>
+          </Card>
+        </CardGroup>
+      </div>
   );
 
   render() {
-    let res;
+
+     let res;
     if (this.state.data.length > 0) {
       console.log(this.state.data);
 
       res = (
         <div>
         <h1>{this.props.match.params.type}</h1>
-        <div className="row">
+        {/* <><button onClick={refreshPage}></button></> */}
+        <Row>
           {this.state.data.map((item, index) => (
-            <div key={index} className="col-12 col-md-5 m-1">
-              <div>
+            <div key={index} className="col-12 col-md-5 m-auto">
+              <div >
                 <this.newsCard item={item} />
               </div>
             </div>
           ))}
-        </div>
+        </Row>
         </div>
       );
     } else {

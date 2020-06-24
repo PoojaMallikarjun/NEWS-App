@@ -19,11 +19,11 @@ class Home extends Component{
   render() {
     return (
       <div>
-        <Link to="/business">Business</Link> <br />
+        {/* <Link to="/business">Business</Link> <br />
         <Link to="/entertainment">entertainment</Link> <br />
         <Link to="/health">health</Link> <br />
         <Link to="/science">science</Link> <br />
-        <Link to="/sports">sports</Link> <br />
+        <Link to="/sports">sports</Link> <br /> */}
         <h1>Todays Headlines</h1>
         {this.state.data.map((item, index) => (
           <div key={index}>
