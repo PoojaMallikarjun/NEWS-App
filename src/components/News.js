@@ -22,7 +22,7 @@ class News extends React.Component {
 
   componentDidMount() {
     let type = this.props.match.params.type;
-    let url = `http://newsapi.org/v2/top-headlines?country=in&category=${type}&apiKey=${process.env.REACT_APP_API_KEY}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${type}&apiKey=${process.env.REACT_APP_API_KEY}`;
     axios.get(url).then((result) => {
       if (result.data.articles.length > 1) {
         this.setState({
