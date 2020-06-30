@@ -1,12 +1,8 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
 import {
   Card,
-  CardImg,
-  CardText,
   CardBody,
-  CardTitle,
   CardHeader,
   CardSubtitle,
   Button,Row, CardGroup
@@ -31,12 +27,9 @@ class Home extends Component{
     <div className="container mt-2">
       <CardGroup>
         <Card body outline color="secondary">
-          {/* <CardTitle><strong>{item.title}</strong></CardTitle> */}
-          <CardHeader><strong>{item.title}</strong></CardHeader>
-          {/* <CardImg top width="100%" src={item.urlToImage}></CardImg> */}
-          <CardBody>
+          <CardHeader className="heading"><strong>{item.title}</strong></CardHeader>
+            <CardBody>
             <CardSubtitle><strong>{item.author}</strong></CardSubtitle>
-            {/* <CardText>{item.content}</CardText> */}
             <br></br>
             <Button color="dark"><a href={item.url}>READ MORE</a></Button> 
           </CardBody>
