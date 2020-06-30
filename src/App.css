@@ -2,6 +2,29 @@
   background-color: black;
 }
 
+
 /* .nav-link{
   color: aqua;
 }  */
+.navbar-dark .navbar-nav .nav-link {
+  color: rgb(113, 113, 219)
+}
+
+* {
+  box-sizing: content-box;
+  }
+
+.case{
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.fs{
+  font-size: 20px;
+}
+
+@media(max-width: 1000px){
+  .footer{
+      display:none;
+  } 
+}

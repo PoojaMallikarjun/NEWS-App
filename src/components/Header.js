@@ -23,9 +23,9 @@ class Header extends Component{
         });
     }
     
-    refresh(){
-        window.location.reload()
-    }
+    // refresh(){
+    //     window.location.reload()
+    // }
 
     render(){
         return(
@@ -33,35 +33,35 @@ class Header extends Component{
                 <Navbar dark expand="md">
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}></NavbarToggler>
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
-                             <Nav>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/business">
-                                        Business
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/entertainment">
-                                        Entertainment
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/health">
-                                        Health
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/science">
-                                        Science
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/sports">
-                                        Sports
-                                    </NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Collapse>
+                            <Collapse isOpen={this.state.isNavOpen} navbar>
+                                <Nav navbar>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/business">
+                                                Business
+                                            </NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/entertainment">
+                                                Entertainment
+                                            </NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/health">
+                                                Health
+                                            </NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/science">
+                                                Science
+                                            </NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/sports">
+                                                Sports
+                                            </NavLink>
+                                        </NavItem>
+                                </Nav>
+                            </Collapse>
                     </div>
                 </Navbar>
             </React.Fragment>

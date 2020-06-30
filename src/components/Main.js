@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import News from "./News";
 import Home from "./Home";
 import Header from './Header';
+import Footer from './Footer';
 
 class Main extends Component {
   render() {
@@ -16,6 +17,7 @@ class Main extends Component {
               <Route exact path="/:type" component={News} /> 
               <Redirect path="/"/>
             </Switch> 
+          <Footer />
           {/* </BrowserRouter>
        </React.Fragment> */}
       </div>

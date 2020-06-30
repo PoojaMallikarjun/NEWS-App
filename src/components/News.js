@@ -7,7 +7,7 @@ import {
   CardBody,
   CardTitle,
   CardHeader,
-  CardSubtitle,Col,
+  CardSubtitle,
   Button,Row, CardGroup
 } from "reactstrap";
 
@@ -64,7 +64,7 @@ class News extends React.Component {
 
       res = (
         <div>
-        <h1>{this.props.match.params.type}</h1>
+        <h1 className="case">{this.props.match.params.type}</h1><hr />
         {/* <><button onClick={refreshPage}></button></> */}
         <Row>
           {this.state.data.map((item, index) => (
@@ -81,9 +81,10 @@ class News extends React.Component {
       res = <h1>{this.state.errMess}</h1>;
     }
     return (
-    <div className="container">
+    <div >
       {res}
-    </div>);
+    </div>
+    );
   }
 }
 
