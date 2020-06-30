@@ -15,7 +15,7 @@ class Home extends Component{
 
   async componentDidMount() {
     let country = "in";
-    let url = `http://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.REACT_APP_API_KEY}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.REACT_APP_API_KEY}`;
     let res = await axios.get(url);
     let data = await res.data.articles;
     this.setState({
