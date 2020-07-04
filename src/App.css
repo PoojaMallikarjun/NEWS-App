@@ -1,32 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+}
+
+h1{
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+.home h1{
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.row-header{
+  margin:0px auto;
+  padding:0px auto;
+}
+
+/* .case1{
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin: 0 auto;
+  text-transform: capitalize;
+} */
 
 
-.navbar-dark {
+
+.row-content {
+  margin:0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height:400px;
+}
+
+.footer{
+  background-color: black;
+  margin: 2px auto 0 auto; 
+  padding: 20px 0px 20px 0px;
+}
+
+address{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
+}
+
+.fa-github{
+  font-size: 2rem;
+  color: white;
+}
+
+.button {
+  
   background-color: black;
 }
 
-/* .nav-link{
-  color: aqua;
-}  */
-.navbar-dark .navbar-nav .nav-link {
-  color: rgb(113, 113, 219)
+.button:hover{
+  background-color: #e6e6e6;
 }
 
-* {
-  box-sizing: content-box;
-  }
+a{
+  color: white;
+}
 
-.case{
-  text-align: center;
-  text-transform: uppercase;
+.button a:hover {
+  color: black;
+}
+
+.fs a:hover {
+  color: white;
+}
+
+.navbar-dark {
+  background-color: #010608;
+}
+
+.navbar-dark .container{
+  padding-left:0 ;
+}
+
+
+
+.page-enter{
+  opacity:0.01;
+  transform: translateX(-100%)
+}
+
+
+.page-enter {
+  opacity: 0.01;
+  transform: translateX(-100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 300ms ease-in;
+}
+
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  opacity: 0.01;
+  transform: translateX(100%);
+  transition: all 300ms ease-out;
 }
 
 .fs{
   font-size: 20px;
 }
 
-@media(max-width: 1000px){
+@media(max-width: 900px){
   .footer{
       display:none;
   } 
 }
 
+
+
+/* .navbar-dark {
+  background-color: black;
+} */
+
+/* .nav-link{
+  color: aqua;
+}  */
+
+/* .navbar-dark .navbar-nav .nav-link {
+  color: rgb(113, 113, 219)
+}
+
+
+
+ .case{
+  text-align: center;
+  text-transform: uppercase;
+} 
+
+
+
+ */
+
+/* .cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+} */
+
+/* @media (min-width: 320px) {
+  .cards { grid-template-columns: repeat(1, 1fr);
+    margin: 0 auto;
+    width: 12rem;
+    /* height: 10rem; */
+    /* margin-top: 1rem; */
+   /* }
+} */
+
+/* @media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(2, 1fr); 
+  }
+}  */
+
+/* @media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+} */
+
+
+ 

@@ -15,7 +15,7 @@ class Home extends Component{
 
   async componentDidMount() {
     let country = "in";
-    let url = `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.REACT_APP_API_KEY}`;
+    let url = `http://newsapi.org/v2/top-headlines?country=${country}&apiKey=${process.env.REACT_APP_API_KEY}`;
     let res = await axios.get(url);
     let data = await res.data.articles;
     this.setState({
@@ -40,15 +40,14 @@ class Home extends Component{
 
   render() {
     return (
-      <div>
+      <div className="home">
         {/* <Link to="/business">Business</Link> <br />
         <Link to="/entertainment">entertainment</Link> <br />
         <Link to="/health">health</Link> <br />
         <Link to="/science">science</Link> <br />
         <Link to="/sports">sports</Link> <br /> */}
-        <h1 className="case">Today's Headlines</h1><hr />
-        <Row>
-         
+        <h1 >Today's Headlines</h1><hr />
+        <Row>   
           {this.state.data.map((item, index) => (
             <div key={index} className="col-12 col-md-5 m-auto">
               {/* <li>

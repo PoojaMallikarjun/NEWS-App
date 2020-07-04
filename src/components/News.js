@@ -3,7 +3,6 @@ import axios from "axios";
 import {
   Card,
   CardImg,
-  CardText,
   CardBody,
   CardHeader,
   CardSubtitle,
@@ -22,7 +21,7 @@ class News extends React.Component {
 
   componentDidMount() {
     let type = this.props.match.params.type;
-    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${type}&apiKey=${process.env.REACT_APP_API_KEY}`;
+    let url = `http://newsapi.org/v2/top-headlines?country=in&category=${type}&apiKey=${process.env.REACT_APP_API_KEY}`;
     axios.get(url).then((result) => {
       if (result.data.articles.length > 1) {
         this.setState({
@@ -39,16 +38,16 @@ class News extends React.Component {
   
 
   newsCard = ({ item }) => (
-      <div className="container mt-2">
-        <CardGroup>
-          <Card body outline color="secondary">
+      <div className="container mt-4 mb-1">
+       <CardGroup>
+          <Card body outline color="secondary" className="cards">
             {/* <CardTitle><strong>{item.title}</strong></CardTitle> */}
             <CardHeader><strong>{item.title}</strong></CardHeader>
-            <CardImg top width="100%" src={item.urlToImage}></CardImg>
+            <CardImg top width="100%"  style={{ height: '20rem'}} src={item.urlToImage}></CardImg>
             <CardBody>
-              <CardSubtitle><strong>{item.author}</strong></CardSubtitle>
-              <CardText>{item.content}</CardText>
-              <Button color="dark"><a href={item.url}>READ MORE</a></Button> 
+              <CardSubtitle><strong>{item.author}</strong></CardSubtitle><br />
+              {/* <CardText>{item.content}</CardText> */}
+              <Button color="dark" className="button"><a href={item.url}>READ MORE</a></Button> 
             </CardBody>
           </Card>
         </CardGroup>
@@ -57,14 +56,29 @@ class News extends React.Component {
 
   render() {
 
+    // const res = this.state.data.map((item, index) => {
+    //   return (
+    //    <div className="container-fluid mt-3">
+    //       <div classname="col-12 col-md-5 m-1" key={index}>
+    //         <CardGroup>
+    //         <Card body outline color="secondary">
+    //           <CardHeader><strong>{item.title}</strong></CardHeader>
+    //           <CardImg className="image" top width="100%"  style={{ height: '20rem'}} src={item.urlToImage}></CardImg>
+    //           <CardBody>
+    //             <CardSubtitle><strong>{item.author}</strong></CardSubtitle><br />
+    //             <Button color="dark"><a href={item.url}>READ MORE</a></Button> 
+    //           </CardBody>
+    //         </Card></CardGroup>
+    //       </div> 
+    //   </div>
+    //   )
+    // });
+
      let res;
     if (this.state.data.length > 0) {
       console.log(this.state.data);
-
       res = (
-        <div>
-        <h1 className="case">{this.props.match.params.type}</h1><hr />
-        {/* <><button onClick={refreshPage}></button></> */}
+        <div >
         <Row>
           {this.state.data.map((item, index) => (
             <div key={index} className="col-12 col-md-5 m-auto">
@@ -76,12 +90,18 @@ class News extends React.Component {
         </Row>
         </div>
       );
-    } else {
+    }
+     else {
       res = <h1>{this.state.errMess}</h1>;
     }
+
     return (
-    <div >
-      {res}
+    <div className="container-fluid ">
+      <Row>
+        <h1 className="case">{this.props.match.params.type}</h1>
+        {res}
+        </Row>  
+      
     </div>
     );
   }

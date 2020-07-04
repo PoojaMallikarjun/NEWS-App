@@ -30,11 +30,11 @@ class Header extends Component{
     render(){
         return(
             <React.Fragment>
-                <Navbar dark expand="md">
+                <Navbar dark expand="md" >
                     <div className="container">
                         <NavbarToggler onClick={this.toggleNav}></NavbarToggler>
                             <Collapse isOpen={this.state.isNavOpen} navbar>
-                                <Nav navbar>
+                                <Nav navbar className="nb">
                                         <NavItem>
                                             <NavLink className="nav-link" to="/business">
                                                 Business
