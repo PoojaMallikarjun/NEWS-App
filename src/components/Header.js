@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Navbar, Nav, NavbarToggler,Collapse, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
-// function refreshPage(){   
-//     window.location.reload();
-// }
+
 
 class Header extends Component{
     constructor(props){
@@ -23,9 +21,6 @@ class Header extends Component{
         });
     }
     
-    // refresh(){
-    //     window.location.reload()
-    // }
 
     render(){
         return(

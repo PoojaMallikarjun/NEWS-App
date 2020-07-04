@@ -9,7 +9,6 @@ import {
   Button,Row, CardGroup
 } from "reactstrap";
 
-
 class News extends React.Component {
   state = {
     data: [],

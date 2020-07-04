@@ -31,7 +31,6 @@ h1{
 } */
 
 
-
 .row-content {
   margin:0px auto;
   padding: 50px 0px 50px 0px;
@@ -86,12 +85,10 @@ a{
 }
 
 
-
 .page-enter{
   opacity:0.01;
   transform: translateX(-100%)
 }
-
 
 .page-enter {
   opacity: 0.01;
@@ -103,7 +100,6 @@ a{
   transform: translateX(0%);
   transition: all 300ms ease-in;
 }
-
 
 .page-exit {
   opacity: 1;
@@ -126,55 +122,3 @@ a{
   } 
 }
 
-
-
-/* .navbar-dark {
-  background-color: black;
-} */
-
-/* .nav-link{
-  color: aqua;
-}  */
-
-/* .navbar-dark .navbar-nav .nav-link {
-  color: rgb(113, 113, 219)
-}
-
-
-
- .case{
-  text-align: center;
-  text-transform: uppercase;
-} 
-
-
-
- */
-
-/* .cards {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-gap: 1rem;
-} */
-
-/* @media (min-width: 320px) {
-  .cards { grid-template-columns: repeat(1, 1fr);
-    margin: 0 auto;
-    width: 12rem;
-    /* height: 10rem; */
-    /* margin-top: 1rem; */
-   /* }
-} */
-
-/* @media (min-width: 600px) {
-  .cards { grid-template-columns: repeat(2, 1fr); 
-  }
-}  */
-
-/* @media (min-width: 900px) {
-  .cards { grid-template-columns: repeat(3, 1fr); }
-} */
-
-
- 
