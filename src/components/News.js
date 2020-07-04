@@ -17,6 +17,7 @@ class News extends React.Component {
   state = {
     data: [],
     errMess: "",
+    pathname: "",
   };
 
   componentDidMount() {
@@ -26,6 +27,7 @@ class News extends React.Component {
       if (result.data.articles.length > 1) {
         this.setState({
           data: result.data.articles,
+          pathname:type,
         });
       } else {
         this.setState({
@@ -35,6 +37,25 @@ class News extends React.Component {
     });
   }
   
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("ComponentDidUpdate");
+    let type = this.props.match.params.type;
+    let url = `http://newsapi.org/v2/top-headlines?country=in&category=${type}&apiKey=${process.env.REACT_APP_API_KEY}`;
+    if (type !== prevState.pathname) {
+      axios.get(url).then((result) => {
+        if (result.data.articles.length > 1) {
+          this.setState({
+            data: result.data.articles,
+            pathname: type,
+          });
+        } else {
+          this.setState({
+            errMess: "Page not found",
+          });
+        }
+      });
+    }
+  }
   
 
   newsCard = ({ item }) => (
