@@ -9,9 +9,6 @@ import {
   Button,Row, CardGroup
 } from "reactstrap";
 
-// function refreshPage(){
-//   window.location.reload()
-// }
 
 class News extends React.Component {
   state = {
@@ -76,24 +73,6 @@ class News extends React.Component {
   );
 
   render() {
-
-    // const res = this.state.data.map((item, index) => {
-    //   return (
-    //    <div className="container-fluid mt-3">
-    //       <div classname="col-12 col-md-5 m-1" key={index}>
-    //         <CardGroup>
-    //         <Card body outline color="secondary">
-    //           <CardHeader><strong>{item.title}</strong></CardHeader>
-    //           <CardImg className="image" top width="100%"  style={{ height: '20rem'}} src={item.urlToImage}></CardImg>
-    //           <CardBody>
-    //             <CardSubtitle><strong>{item.author}</strong></CardSubtitle><br />
-    //             <Button color="dark"><a href={item.url}>READ MORE</a></Button> 
-    //           </CardBody>
-    //         </Card></CardGroup>
-    //       </div> 
-    //   </div>
-    //   )
-    // });
 
      let res;
     if (this.state.data.length > 0) {
